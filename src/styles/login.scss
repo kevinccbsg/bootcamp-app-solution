@@ -1,0 +1,65 @@
+@import "reset";
+@import "beers";
+@import "button";
+@import "card";
+@import "input";
+@import "layout";
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background: white;
+}
+
+.login-icon-container {
+  display: flex;
+  justify-content: center;
+  picture {
+    width: 135px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.login-form-container .button-container {
+  text-align: center;
+  width: 100%;
+}
+
+.form-group {
+  padding: 0 0 20px 0;
+}
+
+/* states */
+
+.login-container {
+  .login-loading,
+  .login-error {
+    display: none;
+  }
+
+  &.error {
+    .login-error {
+      display: block;
+    }
+    .button {
+      display: none;
+    }
+  }
+
+  &.loading {
+    .login-loading {
+      display: block;
+    }
+    .button {
+      display: none;
+    }
+  }
+}
+

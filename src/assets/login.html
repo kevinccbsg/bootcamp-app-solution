@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= require('html-loader!./../templates/head.html') %>
+  </head>
+  <body>
+    <main id="root" class="main-layout">
+      <div class="login-container">
+        <div class="login-icon-container">
+          <picture>
+            <img data-cy="login-image" src="emoji-beer-png-3.png" alt="beer" class="login-img" />
+          </picture>
+        </div>
+        <%= require('html-loader!./../templates/navbar-form.html') %>
+      </div>
+    </main>
+  </body>
+</html>

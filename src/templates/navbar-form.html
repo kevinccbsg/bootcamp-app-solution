@@ -1,0 +1,23 @@
+<form data-cy="login-form" class="login-form-container">
+  <div class="form-group">
+    <label htmlFor="email">Email</label>
+    <input
+      class="input primary"
+      data-cy="email-input"
+      name="email"
+      required
+      type="email"
+      id="email"
+      placeholder="Add your email"
+    />
+  </div>
+  <div class="button-container">
+    <button class="button" dataCy="login-button" type="submit">Submit</button>
+  </div>
+  <div data-cy="login-loading" class="login-loading fa-3x text-center-align">
+    <i class="fas fa-spinner fa-spin"></i>
+  </div>
+  <div data-cy="login-error" class="login-error error-layout">
+    <p>Error on API</p>
+  </div>
+</form>
