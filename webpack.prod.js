@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -30,7 +31,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {},
+            options: {
+              name: '[name].[ext]',
+            },
           },
         ],
       },
@@ -38,6 +41,7 @@ module.exports = {
   },
   plugins: [
     new webpack.ProgressPlugin(),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/assets/index.html',
       chunks: ['app'],
