@@ -1,0 +1,24 @@
+{
+  "name": "bootcamp-app-solution",
+  "version": "1.0.0",
+  "description": "We bootcamp exercise solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinccbsg/bootcamp-app-solution.git"
+  },
+  "keywords": [
+    "webpack",
+    "vanilla",
+    "javascript"
+  ],
+  "author": "Kevin Julian Martinez Escobar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinccbsg/bootcamp-app-solution/issues"
+  },
+  "homepage": "https://github.com/kevinccbsg/bootcamp-app-solution#readme"
+}
