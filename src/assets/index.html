@@ -23,6 +23,27 @@
         >
       </picture>
     </header>
-    <main id="root" class="main-layout transparency"></main>
+    <main class="main-layout transparency">
+      <form id="filter-form" class="filter-form-container">
+        <div class="form-group">
+          <input
+            class="input primary"
+            data-cy="filter-input"
+            name="filter"
+            type="filter"
+            id="filter"
+            placeholder="Beers filter"
+          />
+        </div>
+        <div class="button-container">
+          <button class="button" type="submit">filter</button>
+        </div>
+      </form>
+      <div id="root">
+        <div data-cy="login-loading" class="login-loading fa-3x text-center-align">
+          <i class="fas fa-spinner fa-spin"></i>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

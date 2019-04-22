@@ -16,6 +16,17 @@
   }
 }
 
+.filter-form-container {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  margin: 20px auto;
+  justify-content: space-between;
+  padding: 10px;
+  background: #FFF;
+  border-radius: 10px;
+}
+
 .main-layout-beers {
   display: grid;
   width: 90%;
