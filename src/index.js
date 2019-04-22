@@ -5,7 +5,9 @@ import './images/pilsen-beer/pilsen-beer_lb8drl_c_scale,w_1007.jpg';
 import './images/pilsen-beer/pilsen-beer_lb8drl_c_scale,w_1250.jpg';
 import './images/pilsen-beer/pilsen-beer_lb8drl_c_scale,w_1400.jpg';
 import authRoute from './js/authRoute';
+import { beersTemplate } from './js/beers';
+import { getBeers } from './api';
 
-console.log('index.js');
-
-authRoute('/login.html');
+authRoute('/login.html')
+  .then(() => getBeers())
+  .then(beersTemplate('root'));

@@ -1,20 +1,40 @@
-
+@import "variables";
+@import "responsive";
 .card {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  margin: 20px 0;
+  padding-top: 10px;
+  @include desktop {
+    background: #FFF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .card-image-container {
-    width: 175px;
+    width: 170px;
     margin: 0 auto;
     img {
       width: 100%;
+    }
+    @include tablet {
+      width: 85px;
+      min-height: 330px;
+      display: flex;
+      align-items: center;
     }
   }
   .card-content,
   .card-footer {
     padding: 0px 20px;
   }
+  h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
   .card-footer {
+    margin: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -27,7 +27,7 @@ export const getBeers = async (search, limit = 10) => {
   let extraParams = search ? `search=${search}` : '';
   extraParams = limit ? `${extraParams}&limit=${limit}` : '';
   const reqURL = `${API}/api/v1/beers?${extraParams}`;
-  const response = await axios(reqURL, {
+  const response = await fetch(reqURL, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

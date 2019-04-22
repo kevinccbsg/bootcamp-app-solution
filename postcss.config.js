@@ -4,7 +4,7 @@ module.exports = {
   plugins: [
     autoprefixer({
       flexbox: true,
-      grid: 'autoplace',
+      grid: true,
       browsers: [
         '>1%',
         'last 4 versions',
