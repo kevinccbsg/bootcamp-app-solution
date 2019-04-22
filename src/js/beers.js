@@ -1,3 +1,4 @@
+import { addLike } from '../api';
 
 const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBrewed, likes }) => `
   <div id=${beerId} class="card">
@@ -17,12 +18,16 @@ const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBr
         <div>${contributedBy}</div>
         <div>${firstBrewed}</div>
       </div>
-      <button>
-        <i class="fas fa-heart"></i>
-        ${likes}
-      </button>
+      ${buttonTemplate(likes)}
     </div>
   </div>
+`;
+
+const buttonTemplate = (likes) => `
+  <button>
+    <i class="fas fa-heart"></i>
+    ${likes}
+  </button>
 `;
 
 export const beersTemplate = id => ({ beers }) => {
@@ -31,4 +36,13 @@ export const beersTemplate = id => ({ beers }) => {
     <div class="main-layout-beers">
       ${template}
     </div>`;
+  const buttons = document.querySelectorAll('.card button');
+  buttons.forEach((button) => {
+    const id = button.parentNode.parentNode.getAttribute('id');
+    button.addEventListener('click', (evt) => {
+      const likes = Number(button.textContent.trim()) + 1;
+      button.innerHTML = buttonTemplate(likes);
+      addLike(id)
+    });
+  })
 };

@@ -46,7 +46,7 @@ export const getBeers = async (search, limit = 10) => {
 };
 
 export const addLike = async (id) => {
-  const response = await axios(`${API}/api/v1/beers/${id}/like`, {
+  const response = await fetch(`${API}/api/v1/beers/${id}/like`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
