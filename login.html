@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset=utf-8 /> <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"/> <meta name=theme-color content=#000000 /> <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.6.3/css/all.css integrity=sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/ crossorigin=anonymous> <title>Beerflix</title>
+  <link href="login.css" rel="stylesheet"></head>
+  <body>
+    <main id="root" class="main-layout">
+      <div class="login-container">
+        <h1 class="login-title">Access to Beerflix</h1>
+        <div class="login-icon-container">
+          <picture>
+            <img data-cy="login-image" src="emoji-beer-png-3.png" alt="beer" class="login-img" />
+          </picture>
+        </div>
+        <form data-cy=login-form id=login-form class=login-form-container> <div class=form-group> <label htmlfor=email>Email</label> <input class="input primary" data-cy=email-input name=email required type=email id=email placeholder="Add your email"/> </div> <div class=button-container> <button class=button datacy=login-button type=submit>Login</button> </div> <div data-cy=login-loading class="login-loading fa-3x text-center-align"> <i class="fas fa-spinner fa-spin"></i> </div> <div data-cy=login-error class="login-error error-layout"> <p>Error on API</p> </div> </form> 
+      </div>
+    </main>
+  <script type="text/javascript" src="login.bundle.js"></script></body>
+</html>
