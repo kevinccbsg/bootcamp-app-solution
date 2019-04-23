@@ -1,0 +1,19 @@
+@import "reset";
+@import "variables";
+@import "responsive";
+@import "beers";
+@import "button";
+@import "card";
+@import "input";
+@import "input";
+@import "layout";
+@import "header";
+
+.main-layout-beers {
+  width: 90%;
+  margin: 0 auto;
+  &.transparency {
+    background-color: #dedede;
+    height: 100%;
+  }
+}

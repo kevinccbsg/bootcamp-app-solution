@@ -42,7 +42,7 @@ export const beersTemplate = id => ({ beers }) => {
     button.addEventListener('click', (evt) => {
       const likes = Number(button.textContent.trim()) + 1;
       button.innerHTML = buttonTemplate(likes);
-      addLike(id)
+      addLike(id);
     });
   })
 };

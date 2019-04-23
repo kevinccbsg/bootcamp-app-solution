@@ -63,3 +63,23 @@ export const addLike = async (id) => {
   const data = await response.json();
   return data;
 };
+
+export const getBeersDetail = async (id) => {
+  const reqURL = `${API}/api/v1/beers/${id}`;
+  const response = await fetch(reqURL, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-KEY': get('token'),
+    },
+  });
+  if (response.status >= 400) {
+    const error = { message: 'Error on response', status: response.status };
+    throw error;
+  }
+  if (!response.ok) {
+    throw 'Error';
+  }
+  const data = await response.json();
+  return data;
+};

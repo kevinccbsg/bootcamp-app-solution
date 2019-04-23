@@ -1,4 +1,4 @@
-import './styles/indes.scss';
+import './styles/index.scss';
 import './images/pilsen-beer/pilsen-beer_lb8drl_c_scale,w_200.jpg';
 import './images/pilsen-beer/pilsen-beer_lb8drl_c_scale,w_681.jpg';
 import './images/pilsen-beer/pilsen-beer_lb8drl_c_scale,w_1007.jpg';
