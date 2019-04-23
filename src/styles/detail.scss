@@ -9,11 +9,41 @@
 @import "layout";
 @import "header";
 
-.main-layout-beers {
+#root {
   width: 90%;
   margin: 0 auto;
+  margin-top: 90px;
   &.transparency {
     background-color: #dedede;
     height: 100%;
+  }
+  @include desktop {
+    width: 60%;
+  }
+  .card-content,
+  .card-footer {
+    padding: 0;
+  }
+}
+
+.comment-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  .comment-text {
+    line-height: 1.2;
+    margin: 10px 0;
+  }
+  .comment-date {
+    text-align: right;
+    font-style: italic;
+    font-size: .9rem;
+  }
+  @include desktop {
+    width: 60%;
   }
 }

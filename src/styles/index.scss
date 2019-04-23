@@ -9,6 +9,10 @@
 @import "layout";
 @import "header";
 
+body {
+  background-color: #dedede;
+}
+
 .main-layout {
   &.transparency {
     background-color: #dedede;
@@ -19,12 +23,18 @@
 .filter-form-container {
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 80%;
   margin: 20px auto;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
   background: #FFF;
   border-radius: 10px;
+  .form-group {
+    width: 75%;
+  }
+  @include desktop {
+    width: 30%;
+  }
 }
 
 .main-layout-beers {

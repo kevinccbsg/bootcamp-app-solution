@@ -5,27 +5,35 @@
   </head>
   <body>
     <%= require('html-loader!./../templates/solid-navbar.html') %>
-    <main id="root" class="main-layout transparency">
+    <main class="main-layout transparency">
       <div id="root">
-        <div data-cy="login-loading" class="login-loading fa-3x text-center-align">
+        <div class="login-loading fa-3x text-center-align">
           <i class="fas fa-spinner fa-spin"></i>
         </div>
       </div>
-      <form id="comment-form" class="comment-form-container">
-        <div class="form-group">
-          <input
-            class="input primary"
-            data-cy="comment-input"
-            name="comment"
-            type="comment"
-            id="comment"
-            placeholder="Beer comment"
-          />
+      <div class="comment-container">
+        <h2>Add your review</h2>
+        <div id="comment-list" class="comment-list-container">
+          <div class="login-loading fa-3x text-center-align">
+            <i class="fas fa-spinner fa-spin"></i>
+          </div>
         </div>
-        <div class="button-container">
-          <button class="button" type="submit">comment</button>
-        </div>
-      </form>
+        <form id="comment-form">
+          <div class="form-group">
+            <input
+              class="input primary"
+              data-cy="comment-input"
+              name="comment"
+              type="comment"
+              id="comment"
+              placeholder="Beer comment"
+            />
+          </div>
+          <div class="button-container">
+            <button class="button" type="submit">comment</button>
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>

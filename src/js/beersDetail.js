@@ -1,5 +1,5 @@
 
-const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBrewed }) => `
+const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBrewed, likes }) => `
   <div id=${beerId} class="card">
     <div class="card-image-container">
       <picture>
@@ -17,8 +17,16 @@ const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBr
         <div>${contributedBy}</div>
         <div>${firstBrewed}</div>
       </div>
+      ${buttonTemplate(likes)}
     </div>
   </div>
+`;
+
+const buttonTemplate = (likes) => `
+  <button>
+    <i class="fas fa-heart"></i>
+    ${likes}
+  </button>
 `;
 
 export const beersDetailTemplate = id => ({ beer }) => {

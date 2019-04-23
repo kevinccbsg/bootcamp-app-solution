@@ -83,3 +83,23 @@ export const getBeersDetail = async (id) => {
   const data = await response.json();
   return data;
 };
+
+export const createComment = async (id, comment) => {
+  const response = await fetch(`${API}/api/v1/beers/${id}/comment`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-KEY': get('token'),
+    },
+    body: JSON.stringify({ comment }),
+  });
+  if (response.status >= 400) {
+    const error = { message: 'Error on response', status: response.status };
+    throw error;
+  }
+  if (!response.ok) {
+    throw 'Error';
+  }
+  const data = await response.json();
+  return data;
+};
