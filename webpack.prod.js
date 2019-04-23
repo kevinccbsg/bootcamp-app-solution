@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     app: path.join(__dirname, 'src', 'index.js'),
     detail: path.join(__dirname, 'src', 'detail.js'),
+    login: path.join(__dirname, 'src', 'login.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -60,6 +61,11 @@ module.exports = {
         preserveLineBreaks: false,
         removeComments: true,
       },
+    }),
+    new HtmlWebpackPlugin({  // Also generate a detail.html
+      filename: 'login.html',
+      template: 'src/assets/login.html',
+      chunks: ['login'],
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
