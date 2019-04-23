@@ -6,7 +6,7 @@ import { loading } from './js/ui';
 import { getBeersDetail, createComment } from './api';
 
 const [, id] = window.location.search ?
-      window.location.search.split('=') : [];
+  window.location.search.split('=') : [];
 
 const commentList = document.getElementById('comment-list');
 const commentInput = document.getElementById('comment');

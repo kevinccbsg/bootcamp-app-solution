@@ -21,5 +21,5 @@ form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   beersContainer.innerHTML = loading();
   getBeers(filter.value)
-  .then(beersTemplate('root'));
+    .then(beersTemplate('root'));
 });

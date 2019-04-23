@@ -39,7 +39,7 @@ export const beersDetailTemplate = id => ({ beer }) => {
   const buttons = document.querySelectorAll('.card button');
   buttons.forEach((button) => {
     const id = button.parentNode.parentNode.getAttribute('id');
-    button.addEventListener('click', (evt) => {
+    button.addEventListener('click', () => {
       const likes = Number(button.textContent.trim()) + 1;
       button.innerHTML = buttonTemplate(likes);
       addLike(id);

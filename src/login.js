@@ -14,13 +14,13 @@ form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   formContainer.classList.add('loading');
   login({ email: email.value })
-  .then(({ user }) => {
-    formContainer.classList.remove('loading');
-    set('token', user.apiKey);
-    redirect('/');
-  })
-  .catch(() => {
-    formContainer.classList.remove('loading');
-    formContainer.classList.add('error');
-  });
+    .then(({ user }) => {
+      formContainer.classList.remove('loading');
+      set('token', user.apiKey);
+      redirect('/');
+    })
+    .catch(() => {
+      formContainer.classList.remove('loading');
+      formContainer.classList.add('error');
+    });
 });
