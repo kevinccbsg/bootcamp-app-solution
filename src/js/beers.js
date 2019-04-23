@@ -1,6 +1,6 @@
 import { addLike } from '../api';
 
-const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBrewed, likes }) => `
+export const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBrewed, likes }) => `
   <a href="detail.html?id=${beerId}">
     <div id=${beerId} class="card">
       <div class="card-image-container">
@@ -25,7 +25,7 @@ const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBr
   </a>
 `;
 
-const buttonTemplate = (likes) => `
+export const buttonTemplate = (likes) => `
   <button>
     <i class="fas fa-heart"></i>
     ${likes}

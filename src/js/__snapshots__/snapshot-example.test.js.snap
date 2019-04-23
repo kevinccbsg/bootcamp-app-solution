@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot beerTemplate Snapshot 1`] = `
+"
+  <a href=\\"detail.html?id=2\\">
+    <div id=2 class=\\"card\\">
+      <div class=\\"card-image-container\\">
+        <picture>
+          <img class=\\"card-image\\" src=image alt=name 1 />
+        </picture>
+      </div>
+      <div class=\\"card-content\\">
+        <div>
+          <h2>name 1</h2>
+        </div>
+        <p>description 1</p>
+      </div>
+      <div class=\\"card-footer\\">
+        <div>
+          <div>kevin</div>
+          <div>2019-12</div>
+        </div>
+        
+  <button>
+    <i class=\\"fas fa-heart\\"></i>
+    2
+  </button>
+
+      </div>
+    </div>
+  </a>
+"
+`;
+
+exports[`Snapshot buttonTemplate Snapshot 1`] = `
+"
+  <button>
+    <i class=\\"fas fa-heart\\"></i>
+    2
+  </button>
+"
+`;
