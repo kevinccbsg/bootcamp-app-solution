@@ -17,7 +17,7 @@ authRoute('/login.html')
   .then(() => {
     const intId = Number(id);
     if (!id || isNaN(intId)) {
-      return redirect('/login.html');
+      return redirect('./login.html');
     }
     return getBeersDetail(id);
   })

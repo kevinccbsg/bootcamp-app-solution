@@ -17,7 +17,7 @@ form.addEventListener('submit', (evt) => {
     .then(({ user }) => {
       formContainer.classList.remove('loading');
       set('token', user.apiKey);
-      redirect('/');
+      redirect('./index.html');
     })
     .catch(() => {
       formContainer.classList.remove('loading');
