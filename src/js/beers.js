@@ -46,5 +46,5 @@ export const beersTemplate = id => ({ beers }) => {
       button.innerHTML = buttonTemplate(likes);
       addLike(id);
     });
-  })
+  });
 };
