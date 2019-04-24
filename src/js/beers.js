@@ -1,8 +1,8 @@
 import { addLike } from '../api';
 
 export const beerTemplate = ({ beerId, image, name, description, contributedBy, firstBrewed, likes }) => `
-  <a href="detail.html?id=${beerId}">
-    <div id=${beerId} class="card">
+  <div id=${beerId} class="card">
+    <a href="detail.html?id=${beerId}">
       <div class="card-image-container">
         <picture>
           <img class="card-image" src=${image} alt=${name} />
@@ -14,15 +14,15 @@ export const beerTemplate = ({ beerId, image, name, description, contributedBy, 
         </div>
         <p>${description}</p>
       </div>
-      <div class="card-footer">
-        <div>
-          <div>${contributedBy}</div>
-          <div>${firstBrewed}</div>
-        </div>
-        ${buttonTemplate(likes)}
+    </a>
+    <div class="card-footer">
+      <div>
+        <div>${contributedBy}</div>
+        <div>${firstBrewed}</div>
       </div>
+      ${buttonTemplate(likes)}
     </div>
-  </a>
+  </div>
 `;
 
 export const buttonTemplate = (likes) => `
@@ -32,11 +32,16 @@ export const buttonTemplate = (likes) => `
   </button>
 `;
 
-export const beersTemplate = id => ({ beers }) => {
-  const template = beers.map(beerTemplate).join('');
+export const beersTemplate = (id, year = '') => ({ beers }) => {
+  const template = beers
+    .filter(({ firstBrewed }) => {
+      if (!year) return true;
+      return firstBrewed.split('/')[1] === year;
+    })
+    .map(beerTemplate);
   document.getElementById(id).innerHTML = `
     <div class="main-layout-beers">
-      ${template}
+      ${template.length ? template.join('') : '<p>No beers for that filter</p>'}
     </div>`;
   const buttons = document.querySelectorAll('.card button');
   buttons.forEach((button) => {

@@ -16,10 +16,11 @@ authRoute('/login.html')
 const form = document.getElementById('filter-form');
 const filter = document.getElementById('filter');
 const beersContainer = document.getElementById('root');
+const year = document.getElementById('year');
 
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   beersContainer.innerHTML = loading();
   getBeers(filter.value)
-    .then(beersTemplate('root'));
+    .then(beersTemplate('root', year.value));
 });

@@ -31,6 +31,10 @@ body {
   border-radius: 10px;
   .form-group {
     width: 75%;
+    display: flex;
+    input {
+      margin: 0 20px 0 0;
+    }
   }
   @include desktop {
     width: 30%;

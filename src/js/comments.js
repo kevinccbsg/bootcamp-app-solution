@@ -7,7 +7,7 @@ export const commentTemplate = ({ comment, dateComment }) => `
   </div>
 `;
 
-export const commetsRender = (commentList) => ({ comment }) => {
+export const commetsRender = (commentList) => ({ comment = [] }) => {
   const commentsHTML = comment.map(commentTemplate).join('');
   commentList.innerHTML = commentsHTML;
 };
