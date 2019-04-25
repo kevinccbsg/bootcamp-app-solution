@@ -9,7 +9,7 @@ import { beersTemplate } from './js/beers';
 import { loading } from './js/ui';
 import { getBeers } from './api';
 
-authRoute('/login.html')
+authRoute('./login.html')
   .then(() => getBeers())
   .then(beersTemplate('root'));
 

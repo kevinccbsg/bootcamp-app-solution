@@ -13,7 +13,7 @@ const commentInput = document.getElementById('comment');
 const commentForm = document.getElementById('comment-form');
 const commentButton = document.getElementById('comment-button');
 
-authRoute('/login.html')
+authRoute('./login.html')
   .then(() => {
     const intId = Number(id);
     if (!id || isNaN(intId)) {
