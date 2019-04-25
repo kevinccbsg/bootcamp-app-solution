@@ -1,7 +1,7 @@
 import './styles/detail.scss';
 import authRoute, { redirect } from './js/authRoute';
 import { beersDetailTemplate } from './js/beersDetail';
-import { commetsRender } from './js/comments';
+import { commetsRender, commentButton as commentButtonTemplate } from './js/comments';
 import { loading } from './js/ui';
 import { getBeersDetail, createComment } from './api';
 
@@ -34,6 +34,6 @@ commentForm.addEventListener('submit', (evt) => {
     .then(() => getBeersDetail(id))
     .then(({ beer }) => commetsRender(commentList)(beer))
     .then(() => {
-      commentButton.innerHTML = commentButton();
+      commentButton.innerHTML = commentButtonTemplate();
     });
 });
